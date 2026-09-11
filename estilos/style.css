@@ -1,11 +1,9 @@
 @charset "UTF-8";
 
 /* FONTES */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Asap+Sharp:ital,wght@0,100..900;1,100..900&family=Bebas+Neue&family=Caacupe+One&family=Ephesis&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Passion+One:wght@400;700;900&family=Sriracha&display=swap');
-
-
-/* VARIAVEIS */
+/* VARIÁVEIS */
 :root {
     --cor-padrao: #181818;
     --cor-destaque: #ad66e7;
@@ -13,9 +11,7 @@
     --fonte-titulo: "Montserrat", sans-serif;
 }
 
-
 /* GERAIS */
-
 * {
     margin: 0;
     padding: 0;
@@ -23,396 +19,463 @@
 }
 
 body {
+    min-height: 100vh;
+
     display: flex;
     justify-content: center;
     align-items: center;
 
-    min-height: 100vh;
+    padding: 5vh 0;
 
-    background-image: url(../imgs/background.svg);
+    background-image: url("../imgs/background.svg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+
+    overflow-x: hidden;
 }
 
+/* MAIN */
 main {
+    width: 80vw;
+    min-height: 80vh;
+
+    display: flex;
+
     background-color: var(--cor-padrao);
+
     border-radius: 30px;
     border: 2px solid #3b3b3b;
 
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.507);
 
-    height: 90vh;
-    min-width: 80vw;
-
-    display: flex;
     overflow: hidden;
 }
 
 
-/* TELA-ESQUERDA */
-
-/* PRINCIPAL */
+/* ========================================
+   LADO ESQUERDO
+======================================== */
 
 .lado-esquerdo {
-    background-image: url(../imgs/background-esquerdo.png);
+    width: 45vw;
+    min-height: 80vh;
+
+    background-image: url("../imgs/background-esquerdo.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom center;
-
-    min-width: 45vw;
-    min-height: 90vh;
 }
 
 .principal {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
+    min-height: 80vh;
 
-    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 
     padding-top: 8%;
-    padding-left: 12%;
+    padding-left: 10%;
+    padding-right: 8%;
 }
 
+/* TÍTULO */
 .principal > h1 {
+    width: 100%;
+    max-width: 460px;
+
     color: white;
+
     font-size: 3em;
     font-family: var(--fonte-titulo);
     font-weight: bold;
-
-    width: 460px;
 }
 
 .principal > h1 > .destaque {
     color: var(--cor-destaque);
 }
 
+/* LINHA */
 .principal > .linha-horizontal {
+    width: 55px;
+    height: 6px;
+
+    margin-top: 4%;
+    margin-bottom: 4%;
+
     background-color: var(--cor-destaque);
-    border: 1px solid var(--cor-destaque);
+
+    border: none;
     border-radius: 50px;
-
-    width: 3vw;
-    height: .7vh;
-
-    margin-top: 4.2%;
-    margin-bottom: 4.2%;
 }
 
+/* TEXTO */
 .principal > p {
+    color: var(--cor-text);
+
     font-size: 1.5em;
     font-family: Arial, Helvetica, sans-serif;
-
-    color: var(--cor-text);
 }
 
-/* SECUNDARIO */
-
+/* FRASE DE BAIXO */
 .principal > .secundario {
     margin-top: auto;
-    margin-bottom: 5%;
-    align-self: flex-start;
-
+    margin-bottom: 8%;
 }
 
 .principal > .secundario p {
+    width: 100%;
+    max-width: 300px;
+
     color: var(--cor-text);
 
-    font-size: 1.3em;
-
-    width: 20vw;
+    font-size: 1.1em;
 }
 
 
-/* TELA DE LOGIN (lado direito) */
+/* ========================================
+   LADO DIREITO
+======================================== */
 
 .lado-direito {
+    width: 35vw;
+    min-height: 80vh;
+
     display: flex;
     justify-content: center;
     align-items: center;
-
-    height: 60vh; /* 80 */
-    width: 34.89vw;
 }
 
-/* TITULO */
+/* CAIXA DO LOGIN */
+.screen-login {
+    width: 80%;
+}
+
+
+/* ========================================
+   TÍTULO LOGIN
+======================================== */
 
 .screen-login .text {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 
-    padding-top: clamp(2%, 10vh, 20%);
+    padding-top: 0;
 }
 
 .screen-login .text h2 {
-    font-size: 3em;
+    color: white;
+
+    font-size: clamp(2em, 2.5vw, 3em);
     font-family: Arial, Helvetica, sans-serif;
     font-weight: normal;
 
-
-    color: white;
+    text-align: center;
 }
 
 .screen-login .text p {
-    text-align: center;
-    padding-top: 3.5%;
-
-    font-size: 1.4em;
-    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 15px;
 
     color: var(--cor-text);
+
+    font-size: 1.2em;
+    font-family: Arial, Helvetica, sans-serif;
+
+    text-align: center;
 }
 
-/* INPUTS */
+
+/* ========================================
+   LOGIN
+======================================== */
 
 .login-box {
-    padding-top: 5%;
+    width: 100%;
+    padding-top: 30px;
 }
 
-.login-box .login .box-email input,
-.login-box .login .box-password input {
+.login-box .login {
+    width: 100%;
+}
+
+/* EMAIL E SENHA APENAS */
+.login-box .box-email input,
+.login-box .box-password input {
+    width: 100%;
+
+    padding: 18px;
+    padding-left: 55px;
+
     color: white;
+
     background-color: #2e2e2e;
 
-    font-size: 1.3em;
-    font-family: Verdana, Geneva, Tahoma, sans-serif, 'Times New Roman', Times, serif;
+    font-size: 1.1em;
+    font-family: Arial, Helvetica, sans-serif;
 
     border-radius: 20px;
     border: 1px solid #4e4e4e;
 
-    width: 26vw;
-    padding: 4%;
-
     transition: 0.4s;
 }
 
-.login-box .login .box-email input {
-    margin-bottom: 4%;
-    margin-top: 4%;
+.login-box .box-email input {
+    margin-bottom: 20px;
 }
 
-/* icone login do email */
-
+/* ÍCONE EMAIL */
 .login-box #iemail {
     background-image: url("../imgs/email.svg");
     background-repeat: no-repeat;
-    background-position: 15px center;
-    background-size: 30px;
-
-    padding-left: 55px;
+    background-position: 18px center;
+    background-size: 24px;
 }
 
-/* icone login da senha */
-
+/* ÍCONE SENHA */
 .login-box #ipassword {
     background-image: url("../imgs/lock.svg");
     background-repeat: no-repeat;
-    background-position: 15px center;
-    background-size: 30px;
-
-    padding-left: 55px;
+    background-position: 18px center;
+    background-size: 24px;
 }
 
-/* INPUTS (animação) */
-
-.login-box .login input:hover, .login-box input:focus {
+/* ANIMAÇÃO INPUT */
+.login-box .box-email input:hover,
+.login-box .box-email input:focus,
+.login-box .box-password input:hover,
+.login-box .box-password input:focus {
     border-color: white;
     outline: none;
 }
 
-/* CHECKBOX + ESQUECEU A SENHA */
+
+/* ========================================
+   CHECKBOX + SENHA
+======================================== */
 
 .footer-login-box {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    width: 100%;
 
-    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 20px;
 }
 
-/* Lembrar de mim checkbox */
-
+/* CHECKBOX */
 .footer-login-box .remember {
     display: flex;
     align-items: center;
-    gap: 15px;
+
+    gap: 10px;
 }
 
 .footer-login-box .remember #iremember {
     appearance: none;
 
-    border: 4px solid var(--cor-destaque);
-    border-radius: 5px;
+    width: 20px;
+    height: 20px;
 
-    width: 30px;
-    height: 30px;
+    flex-shrink: 0;
+
+    padding: 0;
+
+    border: 2px solid var(--cor-destaque);
+    border-radius: 5px;
 
     position: relative;
 
     cursor: pointer;
 }
 
-/* Lembrar de mim checkbox (animação) */
-
 .footer-login-box .remember #iremember:checked {
     background-color: var(--cor-destaque);
 }
 
 .footer-login-box .remember #iremember:checked::after {
+    content: "✓";
+
     position: absolute;
+
     top: 50%;
     left: 50%;
 
     transform: translate(-50%, -50%);
 
     color: white;
-    font-size: 1.3em;
 
-    content: "✓";
+    font-size: 13px;
 }
 
-/* label */
-
+/* LABEL */
 .footer-login-box .remember label {
-    white-space: nowrap;
-
-    font-size: 1.3em;
-    font-family: Arial, Helvetica, sans-serif;
     color: var(--cor-text);
-}
 
-/* esqueceu a senha */
-
-.footer-login-box a {
-    text-decoration: none;
-    font-size: 1.3em;
+    font-size: 1em;
     font-family: Arial, Helvetica, sans-serif;
-    color: var(--cor-destaque);
+
+    white-space: nowrap;
 }
 
-/* botao submit */
+/* ESQUECEU SENHA */
+.footer-login-box a {
+    color: var(--cor-destaque);
+
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+
+    text-decoration: none;
+}
+
+
+/* ========================================
+   BOTÃO ENTRAR
+======================================== */
 
 .login-box .login-confirm {
-    padding-top: 5%;
+    width: 100%;
+
+    padding-top: 25px;
 }
 
-.login-box .login-confirm button{
-    border-radius: 30px;
-    border: none;
+.login-box .login-confirm button {
+    width: 100%;
 
-    padding: 3%;
-    width: 27vw;
-    
-    font-size: 1.6em;
-    font-family: Arial, Helvetica, sans-serif;
+    padding: 15px;
+
     color: white;
 
-    background-image: linear-gradient(to bottom, #5f43ff, #4f2fff);
+    font-size: 1.3em;
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-image: linear-gradient(
+        to bottom,
+        #5f43ff,
+        #4f2fff
+    );
+
+    border: 1px solid transparent;
+    border-radius: 30px;
 
     cursor: pointer;
 
-    transition: .3s;
-    border: 1px solid rgba(255, 255, 255, 0)
+    transition: 0.3s;
 }
-
-/* botao submit (animação) */
 
 .login-box .login-confirm button:hover {
-    border: 1px solid rgb(255, 255, 255);
+    border-color: white;
 }
 
-/* rodape do botao ("ou contiue com") */
+
+/* ========================================
+   OU CONTINUE COM
+======================================== */
 
 .screen-login .login-footer-text {
+    width: 100%;
+
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 10px;
 
-    padding-top: 5%;
+    gap: 15px;
+
+    padding-top: 30px;
 }
 
 .screen-login .login-footer-text p {
-    white-space: nowrap;
-
     color: #5f5f5f;
 
-    padding-right: 2.2%;
-    padding-left: 2.2%;
-    
-    font-size: 1.2em;
+    font-size: 1em;
     font-family: Arial, Helvetica, sans-serif;
+
+    white-space: nowrap;
 }
 
-/* LINHA */
-
 .screen-login .login-footer-text .linha-horizontal {
-    width: 9vw;
-    height: .2px;
+    flex: 1;
+
+    height: 1px;
 
     background-color: #5f5f5f;
 
     border: none;
 }
 
-/* imagens/icones */
+
+/* ========================================
+   LOGIN SOCIAL
+======================================== */
 
 .screen-login .login-links {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 50px;
+    width: 100%;
 
-    padding-top: 5%;
+    display: flex;
+    justify-content: center;
+
+    gap: 15px;
+
+    padding-top: 25px;
 }
 
 .screen-login .login-links div {
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 12px;
+
     background-color: #1a1a1a;
 
-    border: 1px solid rgb(46, 46, 46);
+    border: 1px solid #2e2e2e;
     border-radius: 20px;
 
     box-shadow: 2px 2px 10px #0000004f;
-
-    padding: 2% 7%;
 
     transition: 0.3s;
 }
 
 .screen-login .login-links div img {
-    height: 5vh;
+    width: 30px;
+    height: 30px;
 }
-
-/* imagens/icones (animação) */
 
 .screen-login .login-links div:hover {
     border-color: white;
+
     cursor: pointer;
 
-    transform: scale(1.06);
+    transform: scale(1.05);
 }
 
-/* footer */
+
+/* ========================================
+   CADASTRE-SE
+======================================== */
 
 .screen-login .login-box-footer {
     display: flex;
     justify-content: center;
 
-    margin-top: clamp(4%, 6vh, 6%);
-    margin-bottom: 2%;
+    margin-top: 25px;
+    margin-bottom: 20px;
 }
 
 .screen-login .login-box-footer p {
     color: var(--cor-text);
 
+    font-size: 1em;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.3em;
+
+    text-align: center;
 }
 
 .screen-login .login-box-footer a {
-    text-decoration: none;
     color: var(--cor-destaque);
+
+    text-decoration: none;
 }
