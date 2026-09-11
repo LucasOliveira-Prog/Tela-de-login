@@ -1,0 +1,195 @@
+@charset "UTF-8";
+
+/* CELULAR - até 700px */
+
+body {
+    min-height: 100vh;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px 0;
+}
+
+/* MAIN */
+
+main {
+    width: 92vw;
+    min-width: 0;
+    height: auto;
+    min-height: 90vh;
+
+    display: flex;
+    justify-content: center;
+
+    border-radius: 20px;
+}
+
+/* ESCONDE O LADO ESQUERDO */
+
+.lado-esquerdo {
+    display: none;
+}
+
+/* LADO DIREITO */
+
+.lado-direito {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px 0;
+}
+
+/* TELA LOGIN */
+
+.screen-login {
+    width: 85%;
+}
+
+/* TITULO */
+
+.screen-login .text {
+    padding-top: 0;
+}
+
+.screen-login .text h2 {
+    font-size: 2em;
+    text-align: center;
+}
+
+.screen-login .text p {
+    font-size: 1em;
+}
+
+/* LOGIN BOX */
+
+.login-box {
+    width: 100%;
+    padding-top: 20px;
+}
+
+.login-box .login {
+    width: 100%;
+}
+
+/* INPUTS */
+
+.login-box .login .box-email input,
+.login-box .login .box-password input {
+    width: 100%;
+
+    font-size: 1em;
+
+    padding: 16px;
+    padding-left: 50px;
+}
+
+/* ICONES DOS INPUTS */
+
+.login-box #iemail,
+.login-box #ipassword {
+    background-size: 22px;
+    background-position: 15px center;
+
+    padding-left: 50px;
+}
+
+/* CHECKBOX + ESQUECEU A SENHA */
+
+.footer-login-box {
+    width: 100%;
+
+    margin-top: 15px;
+
+    align-items: center;
+}
+
+.footer-login-box .remember {
+    gap: 7px;
+}
+
+.footer-login-box .remember #iremember {
+    width: 20px;
+    height: 20px;
+
+    border-width: 2px;
+}
+
+.footer-login-box .remember label {
+    font-size: .8em;
+}
+
+.footer-login-box a {
+    font-size: .8em;
+}
+
+/* BOTAO */
+
+.login-box .login-confirm {
+    width: 100%;
+    padding-top: 20px;
+}
+
+.login-box .login-confirm button {
+    width: 100%;
+
+    padding: 14px;
+
+    font-size: 1.2em;
+}
+
+/* OU CONTINUE COM */
+
+.screen-login .login-footer-text {
+    width: 100%;
+
+    padding-top: 25px;
+}
+
+.screen-login .login-footer-text p {
+    font-size: .8em;
+}
+
+.screen-login .login-footer-text .linha-horizontal {
+    width: 100%;
+}
+
+/* LOGIN SOCIAL */
+
+.screen-login .login-links {
+    gap: 12px;
+
+    padding-top: 20px;
+}
+
+.screen-login .login-links div {
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 12px;
+}
+
+.screen-login .login-links div img {
+    height: 28px;
+}
+
+/* FOOTER */
+
+.screen-login .login-box-footer {
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.screen-login .login-box-footer p {
+    font-size: .9em;
+    text-align: center;
+}

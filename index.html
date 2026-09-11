@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="estilos/style.css">
+
+    <link rel="stylesheet" 
+        href="estilos/tela-pc.css"
+        media="screen and (min-width: 701px) and (max-width: 1550px)">
+
+    <link rel="stylesheet"
+        href="estilos/tela-celular.css"
+        media="screen and (max-width: 700px)">
+
+</head>
+
+<body>
+    <main>
+        <div class="lado-esquerdo">
+            <div class="principal">
+                <h1>
+                    Grandes conquistas começam com um
+                    <strong class="destaque">simples login</strong>
+                </h1>
+
+                <hr class="linha-horizontal">
+
+                <p>Acesse, explore e evolua</p>
+
+                <!-- RODAPÉ -->
+
+                <div class="secundario">
+                    <p>"Disciplina hoje, resultados amanhã."</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="lado-direito">
+            <div class="screen-login">
+
+                <div class="text">
+                    <h2>Bem-vindo de volta</h2>
+                    <p>Faça login para continuar</p>
+                </div>
+
+                <div class="login-box">
+                    <form action="#" method="post" autocomplete="on" class="login">
+                        <div class="box-email">
+                            <input
+                                type="email"
+                                name="email"
+                                id="iemail"
+                                placeholder="Seu e-mail"
+                                maxlength="50"
+                                required
+                            >
+                        </div>
+
+                        <div class="box-password">
+                            <input
+                                type="password"
+                                name="password"
+                                id="ipassword"
+                                placeholder="Sua senha"
+                                required
+                            >
+                        </div>
+
+                        <div class="footer-login-box">
+                            <div class="remember">
+                                <input
+                                    type="checkbox"
+                                    name="remember"
+                                    id="iremember"
+                                    checked
+                                >
+                                <label for="iremember">
+                                    Lembrar de mim
+                                </label>
+                            </div>
+
+                            <a href="#">
+                                Esqueceu a senha?
+                            </a>
+                        </div>
+
+                        <div class="login-confirm">
+                            <button type="submit">
+                                Entrar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="login-footer-text">
+                    <hr class="linha-horizontal">
+                    
+                    <p>ou continue com</p>
+                    
+                    <hr class="linha-horizontal">
+                </div>
+
+                <div class="login-links">
+                        <div class="google">
+                            <img src="imgs/google.svg" alt="Google">
+                        </div>
+
+                    <div class="github">
+                        <img src="imgs/github.svg" alt="GitHub">
+                    </div>
+
+                    <div class="discord">
+                        <img src="imgs/discord.svg" alt="Discord">
+                    </div>
+                </div>
+
+                <div class="login-box-footer">
+                    <p>
+                        Ainda não tem uma conta?
+                        <a href="#">
+                            Cadastre-se
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,220 @@
+@charset "UTF-8";
+
+/* TABLET / IPAD */
+
+body {
+    min-height: 100vh;
+    height: auto;
+    padding: 3vh 0;
+}
+
+/* CAIXA PRINCIPAL */
+main {
+    width: 92vw;
+    min-width: 0;
+    height: 90vh;
+}
+
+/* =========================
+   LADO ESQUERDO
+========================= */
+
+.lado-esquerdo {
+    min-width: 40%;
+    width: 40%;
+    min-height: 100%;
+}
+
+.principal {
+    padding-top: 10%;
+    padding-left: 10%;
+    padding-right: 5%;
+}
+
+.principal > h1 {
+    font-size: 1.6em;
+    width: 80%;
+    max-width: 280px;
+}
+
+.principal > .linha-horizontal {
+    width: 45px;
+    height: 5px;
+}
+
+.principal > p {
+    font-size: 1em;
+}
+
+.principal > .secundario {
+    margin-top: auto;
+    margin-bottom: 8%;
+}
+
+.principal > .secundario p {
+    width: 90%;
+
+    font-size: 0.8em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+/* =========================
+   LADO DIREITO
+========================= */
+
+.lado-direito {
+    width: 60%;
+    height: 100%;
+}
+
+/* caixa inteira do login */
+.screen-login {
+    width: 80%;
+}
+
+/* TITULO */
+
+.screen-login .text {
+    padding-top: 0;
+}
+
+.screen-login .text h2 {
+    font-size: 2.2em;
+    text-align: center;
+}
+
+.screen-login .text p {
+    font-size: 1.1em;
+}
+
+
+/* =========================
+   INPUTS
+========================= */
+
+.login-box {
+    width: 100%;
+    padding-top: 5%;
+}
+
+.login-box .login {
+    width: 100%;
+}
+
+.login-box .login .box-email input,
+.login-box .login .box-password input {
+    width: 100%;
+    font-size: 1em;
+    padding: 18px;
+    padding-left: 50px;
+}
+
+/* ícones */
+
+.login-box #iemail,
+.login-box #ipassword {
+    background-size: 23px;
+    background-position: 15px center;
+    padding-left: 50px;
+}
+
+
+/* =========================
+   CHECKBOX
+========================= */
+
+.footer-login-box {
+    width: 100%;
+    margin-top: 5%;
+}
+
+.footer-login-box .remember {
+    gap: 8px;
+}
+
+.footer-login-box .remember #iremember {
+    width: 25px;
+    height: 25px;
+
+    min-width: 16px;
+    min-height: 16px;
+
+    border-width: 2px;
+    flex-shrink: 0;
+}
+
+.footer-login-box .remember label {
+    font-size: .9em;
+}
+
+.footer-login-box a {
+    font-size: .9em;
+}
+
+
+/* =========================
+   BOTÃO ENTRAR
+========================= */
+
+.login-box .login-confirm {
+    width: 100%;
+}
+
+.login-box .login-confirm button {
+    width: 100%;
+    padding: 14px;
+    font-size: 1.2em;
+}
+
+
+/* =========================
+   "OU CONTINUE COM"
+========================= */
+
+.screen-login .login-footer-text {
+    width: 100%;
+}
+
+.screen-login .login-footer-text p {
+    font-size: .9em;
+}
+
+.screen-login .login-footer-text .linha-horizontal {
+    width: 100%;
+}
+
+
+/* =========================
+   GOOGLE / GITHUB / DISCORD
+========================= */
+
+.screen-login .login-links {
+    gap: 15px;
+}
+
+.screen-login .login-links div {
+    flex: 1;
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.screen-login .login-links div img {
+    height: 32px;
+}
+
+
+/* =========================
+   CADASTRE-SE
+========================= */
+
+.screen-login .login-box-footer {
+    margin-top: 6%;
+}
+
+.screen-login .login-box-footer p {
+    font-size: 1em;
+    text-align: center;
+}

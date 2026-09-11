@@ -1,0 +1,418 @@
+@charset "UTF-8";
+
+/* FONTES */
+
+@import url('https://fonts.googleapis.com/css2?family=Asap+Sharp:ital,wght@0,100..900;1,100..900&family=Bebas+Neue&family=Caacupe+One&family=Ephesis&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Passion+One:wght@400;700;900&family=Sriracha&display=swap');
+
+
+/* VARIAVEIS */
+:root {
+    --cor-padrao: #181818;
+    --cor-destaque: #ad66e7;
+    --cor-text: #adadad;
+    --fonte-titulo: "Montserrat", sans-serif;
+}
+
+
+/* GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+
+    background-image: url(../imgs/background.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main {
+    background-color: var(--cor-padrao);
+    border-radius: 30px;
+    border: 2px solid #3b3b3b;
+
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.507);
+
+    height: 90vh;
+    min-width: 80vw;
+
+    display: flex;
+    overflow: hidden;
+}
+
+
+/* TELA-ESQUERDA */
+
+/* PRINCIPAL */
+
+.lado-esquerdo {
+    background-image: url(../imgs/background-esquerdo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+
+    min-width: 45vw;
+    min-height: 90vh;
+}
+
+.principal {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+
+    min-height: 100%;
+
+    padding-top: 8%;
+    padding-left: 12%;
+}
+
+.principal > h1 {
+    color: white;
+    font-size: 3em;
+    font-family: var(--fonte-titulo);
+    font-weight: bold;
+
+    width: 460px;
+}
+
+.principal > h1 > .destaque {
+    color: var(--cor-destaque);
+}
+
+.principal > .linha-horizontal {
+    background-color: var(--cor-destaque);
+    border: 1px solid var(--cor-destaque);
+    border-radius: 50px;
+
+    width: 3vw;
+    height: .7vh;
+
+    margin-top: 4.2%;
+    margin-bottom: 4.2%;
+}
+
+.principal > p {
+    font-size: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: var(--cor-text);
+}
+
+/* SECUNDARIO */
+
+.principal > .secundario {
+    margin-top: auto;
+    margin-bottom: 5%;
+    align-self: flex-start;
+
+}
+
+.principal > .secundario p {
+    color: var(--cor-text);
+
+    font-size: 1.3em;
+
+    width: 20vw;
+}
+
+
+/* TELA DE LOGIN (lado direito) */
+
+.lado-direito {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 80vh;
+    width: 34.89vw;
+}
+
+/* TITULO */
+
+.screen-login .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding-top: clamp(2%, 10vh, 20%);
+}
+
+.screen-login .text h2 {
+    font-size: 3em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+
+
+    color: white;
+}
+
+.screen-login .text p {
+    text-align: center;
+    padding-top: 3.5%;
+
+    font-size: 1.4em;
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: var(--cor-text);
+}
+
+/* INPUTS */
+
+.login-box {
+    padding-top: 5%;
+}
+
+.login-box .login .box-email input,
+.login-box .login .box-password input {
+    color: white;
+    background-color: #2e2e2e;
+
+    font-size: 1.3em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif, 'Times New Roman', Times, serif;
+
+    border-radius: 20px;
+    border: 1px solid #4e4e4e;
+
+    width: 26vw;
+    padding: 4%;
+
+    transition: 0.4s;
+}
+
+.login-box .login .box-email input {
+    margin-bottom: 4%;
+    margin-top: 4%;
+}
+
+/* icone login do email */
+
+.login-box #iemail {
+    background-image: url("../imgs/email.svg");
+    background-repeat: no-repeat;
+    background-position: 15px center;
+    background-size: 30px;
+
+    padding-left: 55px;
+}
+
+/* icone login da senha */
+
+.login-box #ipassword {
+    background-image: url("../imgs/lock.svg");
+    background-repeat: no-repeat;
+    background-position: 15px center;
+    background-size: 30px;
+
+    padding-left: 55px;
+}
+
+/* INPUTS (animação) */
+
+.login-box .login input:hover, .login-box input:focus {
+    border-color: white;
+    outline: none;
+}
+
+/* CHECKBOX + ESQUECEU A SENHA */
+
+.footer-login-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin-top: 5%;
+}
+
+/* Lembrar de mim checkbox */
+
+.footer-login-box .remember {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-login-box .remember #iremember {
+    appearance: none;
+
+    border: 4px solid var(--cor-destaque);
+    border-radius: 5px;
+
+    width: 30px;
+    height: 30px;
+
+    position: relative;
+
+    cursor: pointer;
+}
+
+/* Lembrar de mim checkbox (animação) */
+
+.footer-login-box .remember #iremember:checked {
+    background-color: var(--cor-destaque);
+}
+
+.footer-login-box .remember #iremember:checked::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    color: white;
+    font-size: 1.3em;
+
+    content: "✓";
+}
+
+/* label */
+
+.footer-login-box .remember label {
+    white-space: nowrap;
+
+    font-size: 1.3em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--cor-text);
+}
+
+/* esqueceu a senha */
+
+.footer-login-box a {
+    text-decoration: none;
+    font-size: 1.3em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--cor-destaque);
+}
+
+/* botao submit */
+
+.login-box .login-confirm {
+    padding-top: 5%;
+}
+
+.login-box .login-confirm button{
+    border-radius: 30px;
+    border: none;
+
+    padding: 3%;
+    width: 27vw;
+    
+    font-size: 1.6em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+
+    background-image: linear-gradient(to bottom, #5f43ff, #4f2fff);
+
+    cursor: pointer;
+
+    transition: .3s;
+    border: 1px solid rgba(255, 255, 255, 0)
+}
+
+/* botao submit (animação) */
+
+.login-box .login-confirm button:hover {
+    border: 1px solid rgb(255, 255, 255);
+}
+
+/* rodape do botao ("ou contiue com") */
+
+.screen-login .login-footer-text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    padding-top: 5%;
+}
+
+.screen-login .login-footer-text p {
+    white-space: nowrap;
+
+    color: #5f5f5f;
+
+    padding-right: 2.2%;
+    padding-left: 2.2%;
+    
+    font-size: 1.2em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* LINHA */
+
+.screen-login .login-footer-text .linha-horizontal {
+    width: 9vw;
+    height: .2px;
+
+    background-color: #5f5f5f;
+
+    border: none;
+}
+
+/* imagens/icones */
+
+.screen-login .login-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+
+    padding-top: 5%;
+}
+
+.screen-login .login-links div {
+    background-color: #1a1a1a;
+
+    border: 1px solid rgb(46, 46, 46);
+    border-radius: 20px;
+
+    box-shadow: 2px 2px 10px #0000004f;
+
+    padding: 2% 7%;
+
+    transition: 0.3s;
+}
+
+.screen-login .login-links div img {
+    height: 5vh;
+}
+
+/* imagens/icones (animação) */
+
+.screen-login .login-links div:hover {
+    border-color: white;
+    cursor: pointer;
+
+    transform: scale(1.06);
+}
+
+/* footer */
+
+.screen-login .login-box-footer {
+    display: flex;
+    justify-content: center;
+
+    margin-top: clamp(4%, 6vh, 6%);
+    margin-bottom: 2%;
+}
+
+.screen-login .login-box-footer p {
+    color: var(--cor-text);
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3em;
+}
+
+.screen-login .login-box-footer a {
+    text-decoration: none;
+    color: var(--cor-destaque);
+}
