@@ -12,7 +12,7 @@ body {
 main {
     width: 92vw;
     min-width: 0;
-    height: 60vh;
+    height: 90vh;
 }
 
 /* =========================
@@ -65,7 +65,7 @@ main {
 
 .lado-direito {
     width: 60%;
-    height: 100%;
+    height: 80%;
 }
 
 /* caixa inteira do login */
