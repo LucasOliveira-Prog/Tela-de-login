@@ -234,10 +234,45 @@ main {
 
 /* ÍCONE SENHA */
 .login-box #ipassword {
+    position: relative;
+
     background-image: url("../imgs/lock.svg");
     background-repeat: no-repeat;
     background-position: 18px center;
     background-size: 24px;
+}
+
+/* ÍCONE DE MOSTRAR SENHA */
+.login-box .box-password #mostrar {
+    position: absolute;
+/* 
+    background-image: url("../imgs/eye-off.svg");
+    background-repeat: no-repeat;
+    background-position: 18px center;
+    background-size: 4px; */
+    background-color: #4e4e4e00;
+
+    border: none;
+    box-shadow: none;
+
+    top: 43.8%;
+    left: 84%;
+}
+
+.login-box .box-password #mostrar .eye-off {
+    height: 35px;
+    width: 35px;
+}
+
+.login-box .box-password #mostrar .eye-on {
+    height: 50px;
+    width: 50px;
+
+    top
+}
+
+.login-box .box-password #mostrar:hover {
+    cursor: pointer;
 }
 
 /* ANIMAÇÃO INPUT */
